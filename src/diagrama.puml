@@ -1,0 +1,27 @@
+@startuml diagrama_iPhone
+
+interface ReprodutorMusical {
+    + tocar()
+    + pausar()
+    + selecionarMusica()
+}
+
+interface AparelhoTelefonico {
+    + ligar(numero: String)
+    + atender(numero: String)
+    + iniciarCorreioVoz(mensagem: String, destinatario: String)
+}
+
+interface NavegadorInternet {
+    + exibirPagina(url: String)
+    + adicionarNovaAba(url: String)
+    + atualizarPagina()
+}
+
+class iPhone {
+    implements ReprodutorMusical
+    implements AparelhoTelefonico
+    implements NavegadorInternet
+}
+
+@enduml
